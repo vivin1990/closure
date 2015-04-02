@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<button id="inc" onclick="font_manage.increment()">Font+</button>
+<button id="dec" onclick="font_manage.decrement()">Font-</button>
+
+<p id="demo" style="font-size:10px">text </p>
+
+<script>
+
+var font_manage = (function() {
+ var div= document.getElementById("demo");
+ var val=div.style.fontSize;
+ var x=parseInt(val.slice(0,val.length-2));
+
+
+  function changeBy(val) {
+      
+    x += val;
+    div.style.fontSize = x + 'px';
+     console.log(div.style.fontSize);
+  }
+  return {
+    increment: function() {
+      changeBy(1);
+    },
+    decrement: function() {
+      changeBy(-1);
+    },
+    
+  };   
+})();
+
+
+
+
+</script>
+
+</body>
+</html>
