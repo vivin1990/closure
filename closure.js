@@ -38,8 +38,8 @@ function rank(){
 }
 var sum=rank();
 show(sum());
-show(sum());
-show(sum());
+// show(sum());
+// show(sum());
 
 // example 3:
 // ______________________________________________________________
